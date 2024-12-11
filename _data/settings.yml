@@ -1,6 +1,6 @@
 #-------------------------------
 # Site Settings
-title: Nilufer Akalin
+title: Bishal Timsina
 description:
 
 
@@ -12,14 +12,14 @@ menu_settings:
       url: '/'
     - title: 'ABOUT'
       url: '/about'
-    - title: 'Research'
-      url: '/research'
-    - title: 'Teaching'
-      url: '/teaching'
+    - title: 'Project'
+      url: '/project'
+    - title: 'Skills'
+      url: '/skills'
     - title: 'Publications'
       url: '/publications'
-    - title: 'Media and coverage'
-      url: '/media-and-coverage'
+    - title: 'Services'
+      url: '/services'
 
     
 

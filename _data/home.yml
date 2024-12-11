@@ -1,19 +1,22 @@
 details:
-  name: "Nilufer Akalin, Ph.D."
-  title: "Assistant Professor"
-  university: "Michigan State University"
+  name: "Bishal Timsina"
+  title: "Pentester"
+  university: "Coventry University"
 
 profile-section:
   image: "/assets/img/profile.jpg"
-  description: "I am an Assistant Professor and Distinguished Teacher-Scholar Postdoctoral Fellow at Michigan State University's Lyman Briggs College, with a focus on migration studies, critical health studies, race and ethnicity, and qualitative methods. In my research, I delve into the intricate intersections of immigration enforcement and health inequalities in the United States, particularly how racialized immigration laws impact access to care for immigrants. Through a historical lens, I explore how immigration politics shape the healthcare landscape, emphasizing the evolving role of immigration enforcement in producing and perpetuating health disparities. Using innovative qualitative and multi-methods, my work addresses the critical need for understanding how immigration policies and practices intersect with healthcare systems, especially in relation to marginalized communities."
+  description: "I am passionate about cybersecurity and ethical hacking, with extensive hands-on experience in solving labs and challenges. I have a strong foundation in Computer Systems and Networks, having completed numerous labs, including HackTheBox, blue team labs, forensic labs, and cryptography labs, and actively participating in CTF challenges such as CryptoHacks and PicoCTF. While I lack real-world experience, my practical knowledge equips me to tackle real-world cybersecurity challenges effectively. I am highly motivated, detailoriented, and committed to continuous learning, aiming to apply my skills to contribute to the welfare of humanity through IT technologies. "
 
 footer:
   year: 2024
-  name: "Nilufer Akalin"
+  name: "Bishal Timsina"
   website_url: "https://relevant-research.com/" 
   org_name: "Relevant Research"
   social_media:
     - platform: "Facebook"
-      url: "https://www.facebook.com/nilufer.akalin.1"      
+      url: "https://www.facebook.com/bishal.timsina.2002/"
+      icon_class: "fab fa-facebook"
     - platform: "LinkedIn"
-      url: "https://www.linkedin.com/in/nilufer-akalin/" 
+      url: "https://www.linkedin.com/in/bishal-timsina-aa381b263/"
+      icon_class: "fab fa-linkedin"
+ 

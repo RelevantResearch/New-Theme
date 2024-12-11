@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
 
 body {
     background: #eee;
@@ -13,16 +15,42 @@ body {
     background: #fff;
 }
 
-.main-page{
+.main-page {
     margin-right: auto;
     margin-left: auto;
-    font-size: 16px;
-    color: #282828;
     font-family: "Open Sans", sans-serif;
     line-height: 1.6;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5em;
+    font-size: 20px;
+    letter-spacing: 0em;
+
 }
 
-.container{
+.page__content p {
+    font-family: Crimson Text;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.5em;
+    font-size: 20px;
+    letter-spacing: 0em;
+    margin: 0 0 1em;
+    color: #666;
+}
+
+.page-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    border: 3px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .2);
+    display: block;
+    margin: 0 auto;
+}
+
+
+.container {
     max-width: 992px;
     padding-right: 15px;
     padding-left: 15px;
@@ -30,8 +58,13 @@ body {
     margin-left: auto;
 }
 
+.headd {
+    display: flex;
+    flex-direction: column;
+}
 
 #header {
+    order: 1;
     text-align: center;
     padding: 20px 0;
 }
@@ -39,9 +72,15 @@ body {
 #header h1 {
     margin: 0;
     font-size: 60px;
-    color: #333;
-    font-family: "Raleway", sans-serif;
+    color: rgba(255, 144, 26, .85);
+    font-family: "Oswald", sans-serif;
     font-weight: normal;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-size: 52px;
+    display: inline-block;
 }
 
 #header p {
@@ -53,7 +92,7 @@ body {
 
 nav {
     background: rgba(255, 255, 255, 0.8);
-    padding: 10px 0;
+    padding: 0px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -112,52 +151,51 @@ nav ul li a:hover {
     font-weight: 350;
 }
 
-#footer {
-    border-top: 1px solid #000;
-    background: #222;
-    color: #7B7B7B;
-    font-size: 13px;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
-    font-family: "Open Sans", sans-serif;
-}
 
-#footer a {
-    color: orange;
-    margin: 0 5px;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-#footer a:hover {
-    color: #fff;
-}
 
 .profile-section {
     display: flex;
     align-items: flex-start;
-    gap: 20px; /* Space between the image and text */
+    gap: 20px;
+    /* Space between the image and text */
 }
 
 .profile-image img {
     width: 35rem;
     height: 100%;
+    border-radius: 1rem;
+}
+
+
+img.service-image{
+    width: 30rem;
+    height: 18rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    display: block;              /* Makes image a block element so we can use margin to center it */
+    margin-left: auto;           /* Automatic left margin */
+    margin-right: auto;
+    
 }
 
 .summary {
-    flex: 1; /* Takes up the remaining space */
-    max-width: 600px; /* Optional: Set a max-width for the text */
+    flex: 1;
+    /* Takes up the remaining space */
+    max-width: 600px;
+    /* Optional: Set a max-width for the text */
 }
 
 /* General nav bar styles */
 .nav-bar {
+    order: 2;
     width: 100%;
-    background-color: white; /* Optional: Add a background color */
+    background-color: white;
+    /* Optional: Add a background color */
     display: flex;
     justify-content: center;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    
 }
 
 .nav-bar nav ul {
@@ -165,12 +203,15 @@ nav ul li a:hover {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: space-between; /* Ensures even spacing across the nav bar */
-    width: 100%; /* Makes sure it stretches fully */
+    justify-content: space-between;
+    /* Ensures even spacing across the nav bar */
+    width: 100%;
+    /* Makes sure it stretches fully */
 }
 
 .nav-bar nav ul li {
-    flex-grow: 1; /* Makes each box evenly spaced */
+    flex-grow: 1;
+    /* Makes each box evenly spaced */
     text-align: center;
 }
 
@@ -182,21 +223,56 @@ nav ul li a:hover {
     text-align: center;
     display: block;
     padding: 10px 15px;
-    transition: all 0.3s ease;
+    position: relative;
+    /* For positioning the underline */
+    overflow: hidden;
+    /* To ensure the underline does not overflow */
+    transition: color 0.3s ease;
 }
 
 /* Hover state */
 .nav-bar nav ul li a:hover {
-    border-color: blue;
-    color: blue;
+    color: rgba(255, 144, 26, .85);
+    /* Change the text color on hover */
+}
+
+.nav-bar nav ul li a:hover::before {
+    width: 100%;
+    /* Expands the underline */
+}
+
+/* Create a progressive underline using ::before */
+.nav-bar nav ul li a::before {
+    content: '';
+    /* Creates the line */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    /* Start with no underline */
+    height: 2px;
+    /* Thickness of the line */
+    background-color: rgba(255, 144, 26, .85);
+    /* Color of the underline */
+    transition: width 0.3s ease;
+    /* Smooth transition for the width */
 }
 
 /* Active state */
 .nav-bar nav ul li a.active {
-    border-color: blue;
-    color: blue;
+    color: rgba(255, 144, 26, .85);
+    /* Change the text color when active */
 }
 
+.nav-bar nav ul li a.active::before {
+    width: 100%;
+    /* Ensures the line is fully visible when active */
+}
+
+.page.container {
+    padding-left: 5px;
+    padding-right: 5px;
+}
 
 
 .menu {
@@ -269,7 +345,9 @@ nav ul li a:hover {
 
 /* Show the hamburger menu only on small screens */
 .hamburger {
-    display: block;
+    display: flex;
+    justify-content: center;
+
 }
 
 /* On larger screens, show the nav bar and hide the hamburger menu */
@@ -286,23 +364,22 @@ nav ul li a:hover {
 }
 
 .page {
-    
-  
+
     .post__content,
     .page__content {
-      color: var(--text-alt-color);
-  
-      a {
-        color: blue;
-        
-        border-bottom: 1px solid #e6e6e6;
-        text-decoration: none;
-  
-        &:hover {
-          
-          border-bottom-color: black;
+        color: var(--text-alt-color);
+
+        a {
+            color: blue;
+
+            border-bottom: 1px solid #e6e6e6;
+            text-decoration: none;
+
+            &:hover {
+
+                border-bottom-color: black;
+            }
         }
-      }
     }
 
 }
@@ -325,12 +402,18 @@ nav ul li a:hover {
     }
 
     svg {
-        width: 45px;
+        width: 68px;
     }
 
     .nav-bar nav ul {
         display: flex;
         flex-direction: column;
+        background-color: rgba(150, 150, 150, .1);
+        transition: max-height 0.5s ease-in-out;
+    }
+
+    .hamburger.opened {
+        background-color: rgba(150, 150, 150, .1);
     }
 
     .nav-bar.open {
@@ -339,13 +422,89 @@ nav ul li a:hover {
     }
 
     .nav-bar {
+        order: 1;
         top: 0px !important;
     }
 
     #header {
+        order: 2;
         padding-top: 0px;
     }
-    #header h1{
+
+    #header h1 {
         font-size: 40px;
+    }
+
+    .row {
+        padding: 7px;
+    }
+
+    .container {
+        padding: 0;
+    }
+}
+
+#footer {
+    background-color: rgba(255, 144, 26, .85);
+    /* Background color */
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-social-media {
+    margin-bottom: 15px;
+    /* Space between icons and copyright */
+}
+
+.footer-social-media a {
+    margin: 0 15px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.footer-social-media a:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect on hover */
+}
+
+.footer-social-media i {
+    font-size: 40px;
+    /* Set size for icons */
+    color: rgba(7, 10, 13);
+    /* Icon color */
+    transition: opacity 0.3s ease;
+}
+
+.footer-social-media i:hover {
+    opacity: 0.8;
+    /* Slight opacity change on hover */
+    color: blue
+}
+
+.footer-copyright {
+    font-size: 14px;
+    color: #333;
+}
+
+.footer-copyright a {
+    color: #007BFF;
+    /* Change color of website link */
+    text-decoration: none;
+}
+
+.footer-copyright a:hover {
+    text-decoration: underline;
+    /* Underline the link on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .footer-social-media a {
+        margin: 0 10px;
+    }
+
+    .footer-social-media i {
+        font-size: 35px;
+        /* Adjust size for smaller screens */
     }
 }
